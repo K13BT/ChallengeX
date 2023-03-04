@@ -453,6 +453,7 @@ form button:hover {
 
     .start {
         grid-column: 10 / 13;
+        font-size: 10px;
     }
 }
 

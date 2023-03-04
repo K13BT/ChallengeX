@@ -9,6 +9,7 @@ body {
     max-width: 100%;
     overflow-x: hidden;
     text-align: center;
+    position: relative;
 }
 
 :root {
@@ -33,6 +34,10 @@ button, input {
     border: none;
 }
 
+button {
+    text-align: center;
+}
+
 /* Navbar */
 header .main {
     display: grid;
@@ -45,6 +50,7 @@ header .main {
     justify-content: space-between;
     row-gap: 10px;
     padding-top: 20px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -90,8 +96,8 @@ header .main {
 
 .navbar a {
     font-size: 20px;
-    padding: 15px 15px;
-    width: 100%;
+    padding: 15px auto;
+
     text-align: center;
 }
 
@@ -112,7 +118,7 @@ header .main {
     color: #000;
     padding: 10px 15px;
     font-size: 1rem;
-    width: 10%;
+    width: 15%;
 }
 
 .search button:hover {
@@ -250,7 +256,6 @@ header nav a:hover {
 /* Footer */
 .footer-nav a {
     font-size: 20px;
-    margin-right: 10px;
 }
 
 .footer-nav a:hover {
@@ -264,10 +269,13 @@ footer input {
     font-size: 1rem;
 }
 
+footer {
+    background-color: var(--dark-color);
+}
+
 .footer-container {
     display: flex;
     align-items: center;
-    background-color: var(--dark-color);
     padding: 40px 30px;
     color: #fff;
     justify-content: space-between;
@@ -314,6 +322,7 @@ form button {
     font-weight: bold;
     background-color: #000;
     color: #fff;
+    width: 25%;
 }
 
 .input-copyright {
@@ -389,7 +398,7 @@ form button:hover {
     }
 }
 
-@media (max-width: 525px) {
+@media (max-width: 500px) {
     .communities h1 {
         font-size: 40px;
     }
@@ -446,6 +455,11 @@ form button:hover {
     header nav a {
         font-size: 10px;
         padding: 10px;
+    }
+
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
     }
 }
 

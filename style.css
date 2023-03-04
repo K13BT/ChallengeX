@@ -6,6 +6,8 @@ body {
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
     background-image: linear-gradient( #13001a, #74009a, #13001a);
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 :root {

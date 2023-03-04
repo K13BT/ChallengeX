@@ -96,9 +96,7 @@ header .main {
 
 .navbar a {
     font-size: 20px;
-    padding: 15px auto;
-
-    text-align: center;
+    overflow: hidden;
 }
 
 .navbar a:hover {
@@ -118,7 +116,7 @@ header .main {
     color: #000;
     padding: 10px 15px;
     font-size: 1rem;
-    width: 15%;
+    width: 25%;
 }
 
 .search button:hover {
@@ -254,19 +252,12 @@ header nav a:hover {
 }
 
 /* Footer */
-.footer-nav a {
-    font-size: 20px;
-}
-
-.footer-nav a:hover {
-    color: #444;
-}
-
 footer input {
     border-radius: 15px;
     padding: 10px 20px;
     border: none;
     font-size: 1rem;
+    margin-right: 20px;
 }
 
 footer {
@@ -276,25 +267,24 @@ footer {
 .footer-container {
     display: flex;
     align-items: center;
-    padding: 40px 30px;
+    padding: 40px 40px;
     color: #fff;
     justify-content: space-between;
     padding-bottom: 60px;
 }
 
-.footer-nav {
-    display: grid;
-}
-
 .socials {
     display: flex;
-    justify-content: space-between;
+}
+
+.copyright {
+    font-size: 20px;
 }
 
 .socials a {
     color: #fff;
     font-size: 35px;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 
 .socials a:hover {
@@ -310,6 +300,15 @@ footer .logo {
     margin-bottom: 20px;
 }
 
+footer form {
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo-socials {
+    justify-self: center;
+}
+
 footer .logo span:first-child {
     color: #fff;
     font-size: 2rem;
@@ -323,11 +322,6 @@ form button {
     background-color: #000;
     color: #fff;
     width: 25%;
-}
-
-.input-copyright {
-    display: grid;
-    row-gap: 40%;
 }
 
 form button:hover {
@@ -386,15 +380,11 @@ form button:hover {
     .navbar {
         grid-row: 2 / 3;
     }
+}
 
-    .footer-nav {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .footer-nav a {
-        margin-right: 20px;
-        font-size: 25px;
+@media (min-width: 525px) {
+    .navbar a {
+        width: 100%;
     }
 }
 
@@ -456,21 +446,15 @@ form button:hover {
         font-size: 10px;
         padding: 10px;
     }
-
-    .footer-container {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-    }
 }
 
 @media (max-width:768px) {
     .footer-container {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 30px;
         row-gap: 50px;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
+        padding: 30px 10px;
     }
 
     header nav a {
@@ -484,21 +468,5 @@ form button:hover {
 
     .card {
         margin: 20px;
-    }
-
-    .footer-nav {
-        display: grid;
-        justify-self: flex-end;
-        row-gap: 10px;
-    }
-
-    .input-copyright {
-        grid-column: 1 / 3;
-        margin: 0 auto;
-    }
-
-    .input-copyright form {
-        display: flex;
-        align-items: center;
     }
 }
